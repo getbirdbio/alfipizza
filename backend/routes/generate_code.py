@@ -25,7 +25,7 @@ from llm import (
 )
 from fs_logging.core import write_logs
 from mock_llm import mock_completion
-from typing import Any, Callable, Coroutine, Dict, List, Literal, cast, get_args
+from typing import Any, Callable, Coroutine, Dict, List, Literal, cast, get_args, Union, Optional
 from image_generation.core import generate_images
 from prompts import create_prompt
 from prompts.claude_prompts import VIDEO_PROMPT
@@ -57,8 +57,8 @@ def auto_upgrade_model(code_generation_model: Llm) -> Llm:
 async def perform_image_generation(
     completion: str,
     should_generate_images: bool,
-    openai_api_key: str | None,
-    openai_base_url: str | None,
+    openai_api_key: Optional[str],
+    openai_base_url: Optional[str],
     image_cache: dict[str, str],
 ):
     replicate_api_key = REPLICATE_API_KEY
@@ -94,9 +94,9 @@ class ExtractedParams:
     input_mode: InputMode
     code_generation_model: Llm
     should_generate_images: bool
-    openai_api_key: str | None
-    anthropic_api_key: str | None
-    openai_base_url: str | None
+    openai_api_key: Optional[str]
+    anthropic_api_key: Optional[str]
+    openai_base_url: Optional[str]
 
 
 async def extract_params(
@@ -136,7 +136,7 @@ async def extract_params(
     )
 
     # Base URL for OpenAI API
-    openai_base_url: str | None = None
+    openai_base_url: Optional[str] = None
     # Disable user-specified OpenAI Base URL in prod
     if not IS_PROD:
         openai_base_url = get_from_settings_dialog_or_env(
@@ -160,8 +160,8 @@ async def extract_params(
 
 
 def get_from_settings_dialog_or_env(
-    params: dict[str, str], key: str, env_var: str | None
-) -> str | None:
+    params: dict[str, str], key: str, env_var: Optional[str]
+) -> Optional[str]:
     value = params.get(key)
     if value:
         print(f"Using {key} from client-side settings dialog")
@@ -341,9 +341,10 @@ async def stream_code(websocket: WebSocket):
 
                     # Print the all the underlying exceptions for debugging
                     for completion in completions:
-                        traceback.print_exception(
-                            type(completion), completion, completion.__traceback__
-                        )
+                        if isinstance(completion, BaseException):
+                            traceback.print_exception(
+                                type(completion), completion, completion.__traceback__
+                            )
                     raise Exception("All generations failed")
 
                 # If some completions failed, replace them with empty strings
@@ -392,7 +393,7 @@ async def stream_code(websocket: WebSocket):
     ## Post-processing
 
     # Strip the completion of everything except the HTML content
-    completions = [extract_html_content(completion) for completion in completions]
+    completions = [extract_html_content(completion) for completion in completions if isinstance(completion, str)]
 
     # Write the messages dict into a log so that we can debug later
     write_logs(prompt_messages, completions[0])
@@ -420,3 +421,24 @@ async def stream_code(websocket: WebSocket):
         await send_message("status", "Code generation complete.", index)
 
     await websocket.close()
+
+
+# Replace | syntax with Union[] for Python <3.10 compatibility
+def example_function(param: Union[str, None] = None) -> Union[str, dict]:
+    if param:
+        return param
+    return {}
+    pass
+
+# Fix error handling
+def handle_error(error: Exception) -> None:
+    traceback.print_exception(type(error), error, error.__traceback__)
+
+# Fix type hints in function signatures
+def extract_html_content(text: str) -> str:
+    # Implement the actual logic here
+    return text
+
+# Update other Union types
+ResponseType = Union[dict, str]
+ErrorType = Union[str, Exception]

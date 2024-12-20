@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Messina Modern';
+    src: url('MessinaModern-LightItalic.eot');
+    src: local('Messina Modern Light Italic'), local('MessinaModern-LightItalic'),
+        url('MessinaModern-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('MessinaModern-LightItalic.woff2') format('woff2'),
+        url('MessinaModern-LightItalic.woff') format('woff'),
+        url('MessinaModern-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Messina Modern';
+    src: url('MessinaModern-Light.eot');
+    src: local('Messina Modern Light'), local('MessinaModern-Light'),
+        url('MessinaModern-Light.eot?#iefix') format('embedded-opentype'),
+        url('MessinaModern-Light.woff2') format('woff2'),
+        url('MessinaModern-Light.woff') format('woff'),
+        url('MessinaModern-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Messina Modern';
+    src: url('MessinaModern-BoldItalic.eot');
+    src: local('Messina Modern Bold Italic'), local('MessinaModern-BoldItalic'),
+        url('MessinaModern-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('MessinaModern-BoldItalic.woff2') format('woff2'),
+        url('MessinaModern-BoldItalic.woff') format('woff'),
+        url('MessinaModern-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Messina Modern';
+    src: url('MessinaModern-Regular.eot');
+    src: local('Messina Modern Regular'), local('MessinaModern-Regular'),
+        url('MessinaModern-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MessinaModern-Regular.woff2') format('woff2'),
+        url('MessinaModern-Regular.woff') format('woff'),
+        url('MessinaModern-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Messina Modern';
+    src: url('MessinaModern-Bold.eot');
+    src: local('Messina Modern Bold'), local('MessinaModern-Bold'),
+        url('MessinaModern-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MessinaModern-Bold.woff2') format('woff2'),
+        url('MessinaModern-Bold.woff') format('woff'),
+        url('MessinaModern-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Messina Modern';
+    src: url('MessinaModern-RegularItalic.eot');
+    src: local('Messina Modern Regular Italic'), local('MessinaModern-RegularItalic'),
+        url('MessinaModern-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('MessinaModern-RegularItalic.woff2') format('woff2'),
+        url('MessinaModern-RegularItalic.woff') format('woff'),
+        url('MessinaModern-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+

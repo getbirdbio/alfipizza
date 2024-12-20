@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../public"
+		},
+		{
+			"path": "../node_modules"
+		},
+		{
+			"path": "../src"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../blog"
+		},
+		{
+			"path": "../backend"
+		},
+		{
+			"path": "../.next"
+		}
+	]
+}

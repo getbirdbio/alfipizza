@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Recoleta';
+  src: url('/fonts/Recoleta-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('/fonts/Messina Font Folder/MessinaModern-Regular.woff2') format('woff2'),
+       url('/fonts/Messina Font Folder/MessinaModern-Regular.woff') format('woff'),
+       url('/fonts/Messina Font Folder/MessinaModern-Regular.ttf') format('truetype'),
+       url('/fonts/Messina Font Folder/MessinaModern-Regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messina Modern';
+  src: url('/fonts/Messina Font Folder/MessinaModern-Bold.woff2') format('woff2'),
+       url('/fonts/Messina Font Folder/MessinaModern-Bold.woff') format('woff'),
+       url('/fonts/Messina Font Folder/MessinaModern-Bold.ttf') format('truetype'),
+       url('/fonts/Messina Font Folder/MessinaModern-Bold.eot') format('embedded-opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --foreground-rgb: 246, 246, 237;
+  --background-rgb: 0, 95, 59;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+} 

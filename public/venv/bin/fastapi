@@ -1,0 +1,31 @@
+#!/Users/daynelevinrad/alfipizza/screenshot-to-code/public/venv/bin/python
+# -*- coding: utf-8 -*-
+import re
+import sys
+from fastapi.cli import main
+from typing import Union, Optional, Dict, Any
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import openai
+import traceback
+from pathlib import Path
+import json
+import base64
+
+app = FastAPI()
+
+class GenerateRequest(BaseModel):
+    image_path: str
+    prompt: Optional[str] = None
+
+class GenerateResponse(BaseModel):
+    html: str
+    css: str
+    error: Optional[str] = None
+
+def extract_html_content(text: str) -> str:
+    try:
+        # Extract HTML between markers
+        start_marker = "<html>"
+    except Exception as e:
+        return f"Error: {str(e)}"
