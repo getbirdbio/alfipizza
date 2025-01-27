@@ -41,15 +41,6 @@ export function ProductCard({ product, variant = 'default' }: ProductCardProps) 
               {product.description}
             </p>
           )}
-
-          {/* Price */}
-          {product.price > 0 && (
-            <div className="text-center mt-2">
-              <div className="text-lg font-messina text-[#f6f6ed] tracking-wider">
-                R{product.price}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     );
@@ -75,7 +66,6 @@ export function ProductCard({ product, variant = 'default' }: ProductCardProps) 
         {product.subDescription && (
           <p className="text-xs text-[#f6f6ed] opacity-60 italic">{product.subDescription}</p>
         )}
-        <p className="text-lg font-semibold text-[#f6f6ed]">R{product.price}</p>
       </div>
     </div>
   );

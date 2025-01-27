@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   category: 'GARLIC' | 'CLASSICS' | 'ALFI_FAVS';
-  price: number;
+  price?: number;
   description: string;
   subDescription?: string;
   image: string;
@@ -14,7 +14,6 @@ export const products: Product[] = [
     id: 'og',
     name: 'The O.G.',
     category: 'GARLIC',
-    price: 120,
     description: 'Our signature garlic pizza',
     image: '/pizzas/og_alfi_uber.png',
     subDescription: 'The original garlic pizza that started it all'
@@ -25,7 +24,6 @@ export const products: Product[] = [
     id: 'margeritta',
     name: 'Margeritta',
     category: 'CLASSICS',
-    price: 120,
     description: 'Classic Italian pizza with tomato and mozzarella',
     image: '/pizzas/marg_alfi_uber.png',
     subDescription: 'The timeless classic'
@@ -34,7 +32,6 @@ export const products: Product[] = [
     id: 'diavola',
     name: 'Diavola',
     category: 'CLASSICS',
-    price: 140,
     description: 'Spicy salami, tomato sauce, mozzarella',
     image: '/pizzas/diavola_alfi_uber.png',
     subDescription: 'For those who love it hot'
@@ -43,7 +40,6 @@ export const products: Product[] = [
     id: 'funghi',
     name: 'Funghi',
     category: 'CLASSICS',
-    price: 135,
     description: 'Fresh mushrooms, mozzarella, herbs',
     image: '/pizzas/fhungi_alfi_uber.png',
     subDescription: 'Earthy mushroom goodness'
@@ -52,7 +48,6 @@ export const products: Product[] = [
     id: 'quatro-stagione',
     name: 'Quatro Stagione',
     category: 'CLASSICS',
-    price: 150,
     description: 'Four seasons on one pizza',
     image: '/pizzas/quatro_alfi_uber.png',
     subDescription: 'A taste of all seasons'
@@ -61,7 +56,6 @@ export const products: Product[] = [
     id: 'margeritta-speciale',
     name: 'Margeritta Speciale',
     category: 'CLASSICS',
-    price: 140,
     description: 'Our special take on the classic',
     image: '/pizzas/margspecial_alfi_uber.png',
     subDescription: 'A special twist on tradition'
@@ -70,7 +64,6 @@ export const products: Product[] = [
     id: 'vegiterian',
     name: 'Vegiterian',
     category: 'CLASSICS',
-    price: 145,
     description: 'Fresh vegetables and mozzarella',
     image: '/pizzas/veg_alfi_uber.png',
     subDescription: 'Garden fresh vegetables'
@@ -79,7 +72,6 @@ export const products: Product[] = [
     id: 'sicilian',
     name: 'Sicilian',
     category: 'CLASSICS',
-    price: 155,
     description: 'Traditional Sicilian style pizza',
     image: '/pizzas/sicilian_alfi_uber.png',
     subDescription: 'A taste of Sicily'
@@ -88,7 +80,6 @@ export const products: Product[] = [
     id: 'mexicana',
     name: 'Mexicana',
     category: 'CLASSICS',
-    price: 155,
     description: 'Mexican inspired flavors',
     image: '/pizzas/mexicana.png',
     subDescription: 'South of the border taste'
@@ -99,7 +90,6 @@ export const products: Product[] = [
     id: 'double-chorizo',
     name: 'Double Chorizo',
     category: 'ALFI_FAVS',
-    price: 165,
     description: 'Double the chorizo, double the flavor',
     image: '/pizzas/dblbeefchorizo_alfi_uber.png',
     subDescription: 'For serious chorizo lovers'
@@ -108,7 +98,6 @@ export const products: Product[] = [
     id: 'prosciutto-rocket',
     name: 'Proscuito & Rocket',
     category: 'ALFI_FAVS',
-    price: 165,
     description: 'Prosciutto and fresh rocket leaves',
     image: '/pizzas/prosrocket_alfi_uber.png',
     subDescription: 'Fresh and sophisticated'
@@ -117,7 +106,6 @@ export const products: Product[] = [
     id: 'double-beef-chorizo',
     name: 'Double Beef Chorizo',
     category: 'ALFI_FAVS',
-    price: 170,
     description: 'Double beef and chorizo combination',
     image: '/pizzas/dblbeefchorizo_alfi_uber.png',
     subDescription: 'A meaty masterpiece'
@@ -126,7 +114,6 @@ export const products: Product[] = [
     id: 'pepperoncino',
     name: 'Pepperoncino',
     category: 'ALFI_FAVS',
-    price: 155,
     description: 'Spicy pepperoncini peppers',
     image: '/pizzas/pepperoncino_alfi_uber.png',
     subDescription: 'With a spicy kick'
