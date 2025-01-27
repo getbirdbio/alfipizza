@@ -21,15 +21,15 @@ export default function Location() {
             <div className="mb-8">
               <h3 className="text-2xl font-recoleta text-[#f6f6ed] mb-4">OPENING HOURS</h3>
               <p className="text-lg font-messina text-[#f6f6ed] leading-relaxed">
-                Monday - Sunday<br />
-                11:00 - 22:00
+                Tuesday - Sunday<br />
+                4pm - 10pm
               </p>
             </div>
 
             <div>
               <h3 className="text-2xl font-recoleta text-[#f6f6ed] mb-4">CONTACT</h3>
               <p className="text-lg font-messina text-[#f6f6ed] leading-relaxed">
-                <a href="mailto:info@alfipizza.co.za" className="hover:opacity-80 transition-opacity">info@alfipizza.co.za</a>
+                <a href="mailto:hello@alfipizza.co.za" className="hover:opacity-80 transition-opacity">hello@alfipizza.co.za</a>
               </p>
             </div>
           </div>
