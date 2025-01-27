@@ -16,7 +16,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['garlic', 'the-classics', 'alfi-favs', 'dip-sauce']
+      const sections = ['garlic', 'the-classics', 'alfi-favs']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -80,15 +80,6 @@ export default function Navigation() {
             }`}
           >
             ALFI FAVS
-          </button>
-          <span className="text-2xl font-recoleta text-[#f6f6ed] opacity-70">•</span>
-          <button
-            onClick={() => scrollToSection('dips')}
-            className={`text-2xl font-recoleta text-[#f6f6ed] hover:opacity-80 transition-opacity ${
-              activeSection === 'dips' ? 'opacity-100' : 'opacity-70'
-            }`}
-          >
-            DIP SAUCE
           </button>
         </div>
       </div>
