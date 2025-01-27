@@ -2,41 +2,18 @@
 
 import Image from 'next/image';
 import { Product } from '@/data/products';
+import { motion } from 'framer-motion';
 
 interface ProductCardProps {
   product: Product;
   variant?: 'default' | 'compact';
 }
 
-export const ProductCard = ({ product, variant = 'default' }: ProductCardProps) => {
-  // Map product names to actual image filenames
-  const getImagePath = (product: Product) => {
-    // If the product has an image path defined, use it
-    if (product.image) {
-      return product.image;
-    }
+function getImagePath(product: Product): string {
+  return product.image || '/pizzas/default.png';
+}
 
-    // Otherwise, use the image map for pizzas
-    const imageMap: { [key: string]: string } = {
-      'CHEESY GARLIC': '/pizzas/cheesy_garlic.png',
-      'GARLIC BREAD': '/pizzas/garlic_bread.png',
-      'NAP GARLIC PARMESAN': '/pizzas/nap_garlic_parm.png',
-      'GARLIC AND RICOTTA': '/pizzas/garlic_ricotta.png',
-      'MARGHERITA': '/pizzas/margherita.png',
-      'SICILIAN': '/pizzas/sicilian.png',
-      'FUNGHI': '/pizzas/fungi.png',
-      'DIAVOLA': '/pizzas/diavola.png',
-      'QUATRO STAGIONI': '/pizzas/quatro-stagioni.png',
-      'MELANZANE': '/pizzas/melanzane.png',
-      'MEXICANA': '/pizzas/mexicana.png',
-      'DOUBLE PEPPERONI': '/pizzas/double_pepperoni.png',
-      'CHORIZO': '/pizzas/chorizo_pine.png',
-      'PANCETTA': '/pizzas/pancetta_avo.png',
-    };
-
-    return imageMap[product.name] || '/pizzas/placeholder.png';
-  };
-
+export function ProductCard({ product, variant = 'default' }: ProductCardProps) {
   if (variant === 'compact') {
     return (
       <div className="flex flex-col items-center w-[200px]">
@@ -81,39 +58,25 @@ export const ProductCard = ({ product, variant = 'default' }: ProductCardProps) 
   return (
     <div className="flex flex-col items-center w-[280px]">
       {/* Image Container */}
-      <div className={`relative mb-6 ${product.category === 'DIPS' ? 'w-[200px] h-[200px]' : 'w-[280px] h-[280px]'}`}>
+      <div className="relative mb-6 w-[280px] h-[280px]">
         <Image
           src={getImagePath(product)}
           alt={product.name}
           fill
-          className="object-contain"
-          priority
+          className="object-cover rounded-lg"
+          sizes="(max-width: 280px) 100vw, 280px"
         />
       </div>
 
-      {/* Content Container */}
-      <div className="flex flex-col items-center min-h-[120px] justify-between">
-        {/* Name */}
-        <h2 className={`font-recoleta text-[#f6f6ed] mb-4 text-center uppercase ${product.category === 'DIPS' ? 'text-2xl' : 'text-4xl'}`}>
-          {product.name}
-        </h2>
-
-        {/* Description */}
-        {product.description && (
-          <p className="text-base font-messina text-[#f6f6ed] text-center leading-snug tracking-wide mb-4">
-            {product.description}
-          </p>
+      {/* Product Info */}
+      <div className="text-center space-y-2">
+        <h3 className="text-2xl font-recoleta text-[#f6f6ed]">{product.name}</h3>
+        <p className="text-sm text-[#f6f6ed] opacity-80">{product.description}</p>
+        {product.subDescription && (
+          <p className="text-xs text-[#f6f6ed] opacity-60 italic">{product.subDescription}</p>
         )}
-
-        {/* Price */}
-        {product.price > 0 && (
-          <div className="text-center">
-            <div className="text-lg font-messina text-[#f6f6ed] tracking-wider">
-              R{product.price}
-            </div>
-          </div>
-        )}
+        <p className="text-lg font-semibold text-[#f6f6ed]">R{product.price}</p>
       </div>
     </div>
   );
-}; 
+} 
