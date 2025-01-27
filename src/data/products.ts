@@ -110,7 +110,7 @@ export const products: Product[] = [
     category: 'ALFI_FAVS',
     price: 165,
     description: 'Prosciutto and fresh rocket leaves',
-    image: '/pizzas/dblbeefchorizo_alfi_uber.png',
+    image: '/pizzas/prosrocket_alfi_uber.png',
     subDescription: 'Fresh and sophisticated'
   },
   {
