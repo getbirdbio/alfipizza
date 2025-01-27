@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { Product } from '@/data/products';
-import { motion } from 'framer-motion';
 
 interface ProductCardProps {
   product: Product;
