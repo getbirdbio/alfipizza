@@ -27,7 +27,7 @@ export const products: Product[] = [
     category: 'CLASSICS',
     price: 120,
     description: 'Classic Italian pizza with tomato and mozzarella',
-    image: '/pizzas/margeritta.png',
+    image: '/pizzas/marg_alfi_uber.png',
     subDescription: 'The timeless classic'
   },
   {
