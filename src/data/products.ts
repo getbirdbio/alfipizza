@@ -2,9 +2,6 @@ export interface Product {
   id: string;
   name: string;
   category: 'GARLIC' | 'CLASSICS' | 'ALFI_FAVS';
-  price?: number;
-  description: string;
-  subDescription?: string;
   image: string;
 }
 
@@ -14,9 +11,7 @@ export const products: Product[] = [
     id: 'og',
     name: 'The O.G.',
     category: 'GARLIC',
-    description: 'Our signature garlic pizza',
-    image: '/pizzas/og_alfi_uber.png',
-    subDescription: 'The original garlic pizza that started it all'
+    image: '/pizzas/og_alfi_uber.png'
   },
 
   // Classics Section
@@ -24,65 +19,49 @@ export const products: Product[] = [
     id: 'margeritta',
     name: 'Margeritta',
     category: 'CLASSICS',
-    description: 'Classic Italian pizza with tomato and mozzarella',
-    image: '/pizzas/marg_alfi_uber.png',
-    subDescription: 'The timeless classic'
+    image: '/pizzas/marg_alfi_uber.png'
   },
   {
     id: 'diavola',
     name: 'Diavola',
     category: 'CLASSICS',
-    description: 'Spicy salami, tomato sauce, mozzarella',
-    image: '/pizzas/diavola_alfi_uber.png',
-    subDescription: 'For those who love it hot'
+    image: '/pizzas/diavola_alfi_uber.png'
   },
   {
     id: 'funghi',
     name: 'Funghi',
     category: 'CLASSICS',
-    description: 'Fresh mushrooms, mozzarella, herbs',
-    image: '/pizzas/fhungi_alfi_uber.png',
-    subDescription: 'Earthy mushroom goodness'
+    image: '/pizzas/fhungi_alfi_uber.png'
   },
   {
     id: 'quatro-stagione',
     name: 'Quatro Stagione',
     category: 'CLASSICS',
-    description: 'Four seasons on one pizza',
-    image: '/pizzas/quatro_alfi_uber.png',
-    subDescription: 'A taste of all seasons'
+    image: '/pizzas/quatro_alfi_uber.png'
   },
   {
     id: 'margeritta-speciale',
     name: 'Margeritta Speciale',
     category: 'CLASSICS',
-    description: 'Our special take on the classic',
-    image: '/pizzas/margspecial_alfi_uber.png',
-    subDescription: 'A special twist on tradition'
+    image: '/pizzas/margspecial_alfi_uber.png'
   },
   {
     id: 'vegiterian',
     name: 'Vegiterian',
     category: 'CLASSICS',
-    description: 'Fresh vegetables and mozzarella',
-    image: '/pizzas/veg_alfi_uber.png',
-    subDescription: 'Garden fresh vegetables'
+    image: '/pizzas/veg_alfi_uber.png'
   },
   {
     id: 'sicilian',
     name: 'Sicilian',
     category: 'CLASSICS',
-    description: 'Traditional Sicilian style pizza',
-    image: '/pizzas/sicilian_alfi_uber.png',
-    subDescription: 'A taste of Sicily'
+    image: '/pizzas/sicilian_alfi_uber.png'
   },
   {
     id: 'mexicana',
     name: 'Mexicana',
     category: 'CLASSICS',
-    description: 'Mexican inspired flavors',
-    image: '/pizzas/mexicana.png',
-    subDescription: 'South of the border taste'
+    image: '/pizzas/mexicana.png'
   },
 
   // Alfi Favs Section
@@ -90,32 +69,24 @@ export const products: Product[] = [
     id: 'double-chorizo',
     name: 'Double Chorizo',
     category: 'ALFI_FAVS',
-    description: 'Double the chorizo, double the flavor',
-    image: '/pizzas/dblbeefchorizo_alfi_uber.png',
-    subDescription: 'For serious chorizo lovers'
+    image: '/pizzas/dblbeefchorizo_alfi_uber.png'
   },
   {
     id: 'prosciutto-rocket',
     name: 'Proscuito & Rocket',
     category: 'ALFI_FAVS',
-    description: 'Prosciutto and fresh rocket leaves',
-    image: '/pizzas/prosrocket_alfi_uber.png',
-    subDescription: 'Fresh and sophisticated'
+    image: '/pizzas/prosrocket_alfi_uber.png'
   },
   {
     id: 'double-beef-chorizo',
     name: 'Double Beef Chorizo',
     category: 'ALFI_FAVS',
-    description: 'Double beef and chorizo combination',
-    image: '/pizzas/dblbeefchorizo_alfi_uber.png',
-    subDescription: 'A meaty masterpiece'
+    image: '/pizzas/dblbeefchorizo_alfi_uber.png'
   },
   {
     id: 'pepperoncino',
     name: 'Pepperoncino',
     category: 'ALFI_FAVS',
-    description: 'Spicy pepperoncini peppers',
-    image: '/pizzas/pepperoncino_alfi_uber.png',
-    subDescription: 'With a spicy kick'
+    image: '/pizzas/pepperoncino_alfi_uber.png'
   }
 ]; 
