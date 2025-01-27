@@ -43,42 +43,6 @@ export default function MenuGrid() {
         </div>
       </section>
 
-      {/* Dips Section */}
-      <section id="dips" className="scroll-mt-24">
-        <h2 className="text-5xl font-recoleta text-[#f6f6ed] text-center mb-16">DIP SAUCE</h2>
-        <div className="flex flex-wrap justify-center items-start gap-x-16 gap-y-24 max-w-7xl mx-auto px-4">
-          {products
-            .filter(p => p.category === 'DIPS')
-            .map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-        </div>
-      </section>
-
-      {/* Drinks Section */}
-      <section id="drinks" className="scroll-mt-24">
-        <h2 className="text-5xl font-recoleta text-[#f6f6ed] text-center mb-16">DRINKS</h2>
-        <div className="flex flex-wrap justify-center items-start gap-x-16 gap-y-24 max-w-7xl mx-auto px-4">
-          {products
-            .filter(p => p.category === 'DRINKS')
-            .map(product => (
-              <ProductCard key={product.id} product={product} variant="compact" />
-            ))}
-        </div>
-      </section>
-
-      {/* Dessert Section */}
-      <section id="dessert" className="scroll-mt-24">
-        <h2 className="text-5xl font-recoleta text-[#f6f6ed] text-center mb-16">DESSERT</h2>
-        <div className="flex flex-wrap justify-center items-start gap-x-16 gap-y-24 max-w-7xl mx-auto px-4">
-          {products
-            .filter(p => p.category === 'DESSERT')
-            .map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-        </div>
-      </section>
-
       {/* Location Section */}
       <Location />
     </div>
