@@ -50,7 +50,7 @@ export default function Navigation() {
 
         <div className="max-w-3xl mx-auto mb-16">
           <p className="text-center font-messina text-[#f6f6ed] text-sm sm:text-base leading-relaxed">
-            Our cherished sourdough is hand-rolled and made from scratch daily on-site. Our menu features a mix of traditional and artisanal recipes, lovingly crafted and cooked to perfection in our wood-fired ovens, as our pizzaiolos embrace the live-fire approach to cooking, staying true to the natural, vibrant character of our sourdough. Thank you for sharing this experience with us.
+            Our sourdough? It's the MVP—hand-rolled and made fresh on the daily, right here in-house. Our menu is a vibe, featuring a mix of OG classics and next-level creations, all cooked up in our wood-fired ovens. Our pizzaiolos are basically sourdough DJs, spinning that dough magic to bring out bold, natural flavors. Thanks for rolling with us—now grab a slice and let's make it a moment!
           </p>
         </div>
 
