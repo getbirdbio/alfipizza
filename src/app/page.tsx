@@ -11,11 +11,11 @@ export default function Home() {
           alt="Hero Logo" 
           className="w-full max-w-md md:max-w-lg lg:max-w-xl mx-auto mb-8"
         />
-        <div className="w-full flex justify-center overflow-hidden p-4 bg-[#004830]">
+        <div className="w-full flex justify-center">
           <img 
             src="/pizzas/Alfi_Menu_Final14Feb.png" 
             alt="Alfi Menu" 
-            className="w-[90%] max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl object-contain"
+            className="w-full max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl object-contain"
           />
         </div>
       </div>
