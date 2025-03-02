@@ -64,3 +64,6 @@ results*.json
 *.log
 .vercel
 .turbo
+
+# PDF files
+*.pdf
