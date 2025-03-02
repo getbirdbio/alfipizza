@@ -13,7 +13,7 @@ export default function Home() {
         />
         <div className="w-full flex justify-center">
           <img 
-            src="/pizzas/Alfi_Menu_Final14Feb.png" 
+            src={`/pizzas/Alfi_Menu_Final14Feb.png?v=${Date.now()}`}
             alt="Alfi Menu" 
             className="w-full max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl object-contain"
           />
