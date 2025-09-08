@@ -13,11 +13,18 @@ export default function Home() {
           className="w-full max-w-md md:max-w-lg lg:max-w-xl mx-auto mb-8"
         />
         <div className="w-full flex justify-center">
-          <img 
-            src={`/pizzas/Alfi_Menu_Final14Feb.png?v=${Date.now()}`}
-            alt="Alfi Menu" 
-            className="w-full max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl object-contain"
-          />
+          <div className="flex flex-col md:flex-row gap-2 max-w-7xl">
+            <img 
+              src={`/pizzas/Alfi_Menu_Website.png?v=${Date.now()}`}
+              alt="Alfi Menu Page 1" 
+              className="w-full md:w-1/2 max-w-md md:max-w-lg lg:max-w-2xl object-contain"
+            />
+            <img 
+              src={`/pizzas/Alfi_Menu_Website (1).png?v=${Date.now()}`}
+              alt="Alfi Menu Page 2" 
+              className="w-full md:w-1/2 max-w-md md:max-w-lg lg:max-w-2xl object-contain"
+            />
+          </div>
         </div>
       </div>
       <Location />
