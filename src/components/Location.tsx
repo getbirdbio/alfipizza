@@ -22,8 +22,8 @@ export default function Location() {
               <h3 className="text-xl md:text-2xl font-recoleta text-[#f6f6ed] mb-2 md:mb-4">OPENING HOURS</h3>
               <p className="text-base md:text-lg font-messina text-[#f6f6ed] leading-relaxed">
                 Monday - Sunday<br />
-                Lunch - 12:00 - 17:00<br />
-                Dinner - 17:00 - CLOSED
+                Lunch | 12:00 to 17:00<br />
+                Dinner | 17:00 to 21:00
               </p>
             </div>
 
