@@ -11,8 +11,8 @@ export default function Footer() {
             <p className="mb-2">123 Main Road</p>
             <p className="mb-2">Sea Point, Cape Town</p>
             <p className="mb-2">
-              <a href="tel:+27612042451" className="hover:text-gray-300">
-                Phone: +27 61 204 2451
+              <a href="tel:+27608278803" className="hover:text-gray-300">
+                Phone: +27 60 827 8803
               </a>
             </p>
             <p>Email: hello@alfipizza.co.za</p>
