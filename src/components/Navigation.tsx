@@ -50,7 +50,7 @@ export default function Navigation() {
 
         <div className="max-w-3xl mx-auto mb-16">
           <p className="text-center font-messina text-[#f6f6ed] text-sm sm:text-base leading-relaxed">
-            Our sourdough? It&apos;s the MVP—hand-rolled and made fresh on the daily, right here in-house. Our menu is a vibe, featuring a mix of OG classics and next-level creations, all cooked up in our wood-fired ovens. Our pizzaiolos are basically sourdough DJs, spinning that dough magic to bring out bold, natural flavors. Thanks for rolling with us—now grab a slice and let&apos;s make it a moment!
+            Our sourdough? It&apos;s the MVP—hand-rolled and made fresh on the daily, right here in-house. Our menu is a vibe, featuring a mix of OG classics and next-level creations. Our pizzaiolos are basically sourdough DJs, spinning that dough magic to bring out bold, natural flavors. Thanks for rolling with us—now grab a slice and let&apos;s make it a moment!
           </p>
         </div>
 
