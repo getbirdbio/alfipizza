@@ -26,6 +26,7 @@ export default function Location() {
             phoneHref="tel:+27608278803"
             email="hellocpt@alfipizza.co.za"
             mapSrc={CAPE_TOWN_MAP}
+            dinnerClose="21:00"
           />
 
           <LocationCard
@@ -37,6 +38,7 @@ export default function Location() {
             phoneHref="tel:+27605083865"
             email="hellojhb@alfipizza.co.za"
             mapSrc={JOHANNESBURG_MAP}
+            dinnerClose="20:00"
           />
         </div>
       </div>
@@ -52,6 +54,7 @@ function LocationCard({
   phoneHref,
   email,
   mapSrc,
+  dinnerClose = '21:00',
   isNew = false,
 }: {
   city: string
@@ -61,6 +64,7 @@ function LocationCard({
   phoneHref: string
   email: string
   mapSrc: string
+  dinnerClose?: string
   isNew?: boolean
 }) {
   return (
@@ -98,7 +102,7 @@ function LocationCard({
               <br />
               Lunch | 12:00 to 17:00
               <br />
-              Dinner | 17:00 to 21:00
+              Dinner | 17:00 to {dinnerClose}
             </p>
           </div>
         </div>
