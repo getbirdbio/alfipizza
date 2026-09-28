@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  verification: {
+    google: 'LfSWmvCw_9cv8hZAO-0KleQqizcE8sS32qnuMI1388g',
+  },
   icons: {
     icon: '/pizzas/Alfi_icon_loyalty.png',
     shortcut: '/pizzas/Alfi_icon_loyalty.png',
