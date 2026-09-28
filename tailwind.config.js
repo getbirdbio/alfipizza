@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'recoleta': ['Recoleta', 'serif'],
-        'messina': ['Messina Modern', 'sans-serif'],
+        recoleta: ['Recoleta', 'serif'],
+        messina: ['Messina Modern', 'sans-serif'],
       },
     },
   },
