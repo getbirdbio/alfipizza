@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ORDER_URL } from '@/lib/site'
 
 export default function Footer() {
   return (
@@ -20,7 +21,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/menu" className="hover:text-gray-300">Menu</Link></li>
               <li><Link href="/location" className="hover:text-gray-300">Location</Link></li>
-              <li><Link href="/order" className="hover:text-gray-300">Order Now</Link></li>
+              <li><a href={ORDER_URL} className="hover:text-gray-300">Order Now</a></li>
             </ul>
           </div>
 
