@@ -1,19 +1,20 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { ORDER_URL } from '@/lib/site'
 
 const STORES = [
   {
     id: 'cpt',
     name: 'Cape Town',
     suburb: 'Sea Point',
-    href: 'https://www.meandu.app/alfi',
+    href: ORDER_URL,
   },
   {
     id: 'jhb',
     name: 'Johannesburg',
     suburb: 'Birdhaven',
-    href: 'https://www.meandu.app/alfipizzajhb',
+    href: ORDER_URL,
     isNew: true,
   },
 ] as const

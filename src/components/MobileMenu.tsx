@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { ORDER_URL } from '@/lib/site'
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
@@ -49,13 +50,13 @@ export default function MobileMenu() {
             >
               Location
             </Link>
-            <Link 
-              href="/order" 
+            <a 
+              href={ORDER_URL} 
               className="px-3 py-2 text-sm font-medium bg-black text-white hover:bg-gray-800"
               onClick={() => setIsOpen(false)}
             >
               Order Now
-            </Link>
+            </a>
           </div>
         </div>
       )}
