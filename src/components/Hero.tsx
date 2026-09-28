@@ -2,8 +2,8 @@
 
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect } from 'react';
+import { ORDER_URL } from '@/lib/site'
 
 export default function Hero() {
   useEffect(() => {
@@ -33,14 +33,14 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center space-x-4">
-            <Link
-              href="https://www.ubereats.com/za/store/alfi-pizza/Ue_Hs_iqQPGxGxGxGxGx"
+            <a
+              href={ORDER_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#f6f6ed] text-[#005f3b] px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-opacity"
             >
               Order Now
-            </Link>
+            </a>
           </div>
         </div>
       </div>
