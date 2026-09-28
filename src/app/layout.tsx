@@ -3,8 +3,13 @@ import './globals.css'
 import RootLayoutClient from '@/components/RootLayoutClient'
 
 export const metadata: Metadata = {
-  title: 'ALFI PIZZA | Cape Town\'s First Newhaven-Style Pizza 🍕',
-  description: 'Bringing authentic Newhaven-style pizza to Sea Point, Cape Town. Handcrafted with love, baked to perfection.',
+  title: 'ALFI PIZZA | Newhaven-Pizza 🍕',
+  description: 'Bringing authentic Newhaven-Pizza to Sea Point, Cape Town. Handcrafted with love, baked to perfection.',
+  icons: {
+    icon: '/pizzas/Alfi_icon_loyalty.png',
+    shortcut: '/pizzas/Alfi_icon_loyalty.png',
+    apple: '/pizzas/Alfi_icon_loyalty.png',
+  }
 }
 
 export default function RootLayout({
