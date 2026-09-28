@@ -73,7 +73,7 @@ export default function Hero() {
           <a href="#" className="underline hover:text-white transition-colors">Full allergen list</a>
         </p>
         <p className="text-lg mb-8">
-          Due to recent events we have updated our allergens matrix to 'may contain traces of peanuts'
+          Due to recent events we have updated our allergens matrix to &apos;may contain traces of peanuts&apos;
           for all pizzas as the flour may contain traces of mustard.
         </p>
         <p className="text-lg">
