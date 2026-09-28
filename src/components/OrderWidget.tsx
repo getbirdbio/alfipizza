@@ -8,7 +8,7 @@ const STORES = [
     id: 'cpt',
     name: 'Cape Town',
     suburb: 'Sea Point',
-    href: ORDER_URL,
+    href: 'https://meandu.app/alfi',
   },
   {
     id: 'jhb',
