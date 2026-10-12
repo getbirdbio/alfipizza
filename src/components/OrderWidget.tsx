@@ -8,7 +8,7 @@ const STORES = [
     id: 'cpt',
     name: 'Cape Town',
     suburb: 'Sea Point',
-    href: 'https://www.zapahead.co.za/merchants/alfi-pizza-seapoint',
+    href: 'https://order.nowish.co.za/merchants/alfi-pizza-seapoint',
   },
   {
     id: 'jhb',
