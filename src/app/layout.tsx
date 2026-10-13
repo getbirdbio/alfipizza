@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import RootLayoutClient from '@/components/RootLayoutClient'
+import MetaPixel from '@/components/MetaPixel'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.alfipizza.co.za'),
@@ -24,5 +25,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return <RootLayoutClient>{children}</RootLayoutClient>
+  return (
+    <RootLayoutClient>
+      <MetaPixel />
+      {children}
+    </RootLayoutClient>
+  )
 } 
