@@ -41,7 +41,7 @@ export type RestaurantLocation = {
   telephone: string
   email: string
   orderUrl: string
-  hours: LocationHours
+  hours: readonly LocationHours[]
 }
 
 // Address, phone, email, and hours copied from the live location cards
@@ -58,19 +58,21 @@ export const LOCATIONS: readonly RestaurantLocation[] = [
     telephone: '+27605083865',
     email: 'hellojhb@alfipizza.co.za',
     orderUrl: ORDER_URL,
-    hours: {
-      days: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-      ],
-      opens: '12:00',
-      closes: '21:00',
-    },
+    hours: [
+      {
+        days: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday',
+          'Sunday',
+        ],
+        opens: '12:00',
+        closes: '21:00',
+      },
+    ],
   },
   {
     id: 'seapoint',
@@ -83,18 +85,17 @@ export const LOCATIONS: readonly RestaurantLocation[] = [
     telephone: '+27608278803',
     email: 'hellocpt@alfipizza.co.za',
     orderUrl: ORDER_URL_SEA_POINT,
-    hours: {
-      days: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-      ],
-      opens: '12:00',
-      closes: '21:00',
-    },
+    hours: [
+      {
+        days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'],
+        opens: '12:00',
+        closes: '21:00',
+      },
+      {
+        days: ['Friday', 'Saturday'],
+        opens: '12:00',
+        closes: '22:00',
+      },
+    ],
   },
 ]

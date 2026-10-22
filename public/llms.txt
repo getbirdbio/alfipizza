@@ -9,7 +9,7 @@ Order: https://order.nowish.co.za/merchants/alfi-pizza-birdhaven
 
 ## Alfi Pizza Sea Point (Cape Town)
 158 Main Road, Sea Point, Cape Town, 8005
-Hours: Monday–Sunday, 12:00–21:00
+Hours: Sunday–Thursday, 12:00–21:00; Friday–Saturday, 12:00–22:00
 Order: https://order.nowish.co.za/merchants/alfi-pizza-seapoint
 
 Website: https://www.alfipizza.co.za
