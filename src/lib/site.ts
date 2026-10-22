@@ -69,7 +69,7 @@ export const LOCATIONS: readonly RestaurantLocation[] = [
         'Sunday',
       ],
       opens: '12:00',
-      closes: '20:00',
+      closes: '21:00',
     },
   },
   {

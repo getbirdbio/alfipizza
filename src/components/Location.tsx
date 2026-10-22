@@ -38,7 +38,7 @@ export default function Location() {
             phoneHref="tel:+27605083865"
             email="hellojhb@alfipizza.co.za"
             mapSrc={JOHANNESBURG_MAP}
-            dinnerClose="20:00"
+            dinnerClose="21:00"
           />
         </div>
       </div>
