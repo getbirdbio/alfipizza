@@ -26,7 +26,10 @@ export default function Location() {
             phoneHref="tel:+27608278803"
             email="hellocpt@alfipizza.co.za"
             mapSrc={CAPE_TOWN_MAP}
-            dinnerClose="21:00"
+            hoursBlocks={[
+              { days: 'Sunday – Thursday', dinnerClose: '21:00' },
+              { days: 'Friday – Saturday', dinnerClose: '22:00' },
+            ]}
           />
 
           <LocationCard
@@ -55,6 +58,7 @@ function LocationCard({
   email,
   mapSrc,
   dinnerClose = '21:00',
+  hoursBlocks,
   isNew = false,
 }: {
   city: string
@@ -65,8 +69,10 @@ function LocationCard({
   email: string
   mapSrc: string
   dinnerClose?: string
+  hoursBlocks?: { days: string; dinnerClose: string }[]
   isNew?: boolean
 }) {
+  const blocks = hoursBlocks ?? [{ days: 'Monday – Sunday', dinnerClose }]
   return (
     <article className="bg-[#f6f6ed] rounded-2xl overflow-hidden shadow-xl flex flex-col">
       <div className="px-6 md:px-8 pt-6 md:pt-8 pb-4 flex items-start justify-between gap-4">
@@ -97,13 +103,20 @@ function LocationCard({
           </div>
           <div>
             <h4 className="font-recoleta text-lg text-[#005f3b] mb-2">Opening hours</h4>
-            <p className="font-messina text-[#005f3b]/80 text-sm leading-relaxed">
-              Monday – Sunday
-              <br />
-              Lunch | 12:00 to 17:00
-              <br />
-              Dinner | 17:00 to {dinnerClose}
-            </p>
+            <div className="flex flex-col gap-3">
+              {blocks.map((block) => (
+                <p
+                  key={block.days}
+                  className="font-messina text-[#005f3b]/80 text-sm leading-relaxed"
+                >
+                  {block.days}
+                  <br />
+                  Lunch | 12:00 to 17:00
+                  <br />
+                  Dinner | 17:00 to {block.dinnerClose}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
 

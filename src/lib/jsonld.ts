@@ -23,14 +23,12 @@ function restaurantNode(location: RestaurantLocation) {
       postalCode: location.postalCode,
       addressCountry: location.addressCountry,
     },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: [...location.hours.days],
-        opens: location.hours.opens,
-        closes: location.hours.closes,
-      },
-    ],
+    openingHoursSpecification: location.hours.map((spec) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: [...spec.days],
+      opens: spec.opens,
+      closes: spec.closes,
+    })),
     potentialAction: {
       '@type': 'OrderAction',
       target: location.orderUrl,
